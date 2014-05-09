@@ -1,4 +1,4 @@
-S2aaS
+S2aaS-Repository
 =====
 
-S2aaS with Bitcoin Proof of Concept
+Repository for sensors with their bitcoin address and meta data
