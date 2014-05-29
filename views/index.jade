@@ -1,0 +1,42 @@
+extends layout
+
+block content
+	div.container
+		form(class="form-horizontal", role="form", id="sensorForm", action="javascript:register_sensor(form2js(\'sensorForm\'))") 
+			.form-group
+				label(for="inputName", class="col-sm-2 control-label") Name
+				.col-sm-10
+					input(type="text", class="form-control", name="name", value="MySensor")
+			.form-group
+				label(for="inputBtcAddr", class="col-sm-2 control-label") Bitcoin address
+				.col-sm-10
+					input(type="text", class="form-control", name="btcAddress", placeholder="")
+			.form-group
+				label(for="inputPrice", class="col-sm-2 control-label") Price
+				.col-sm-10
+					input(type="number", class="form-control", name="price", placeholder="10 [mBTC]")
+			.form-group
+				label(for="inputUnit", class="col-sm-2 control-label") Unit
+				.col-sm-10
+					input(type="text", class="form-control", name="unit", placeholder="°C")
+			.form-group
+				label(for="inputDatatype", class="col-sm-2 control-label") Datatype
+				.col-sm-10
+					input(type="text", class="form-control", name="datatype", placeholder="int")
+			.form-group
+				label(for="inputLocation", class="col-sm-2 control-label") Location
+				.col-sm-5
+					input(type="number", class="form-control", name="longitude", placeholder="longitude")
+				.col-sm-5
+					input(type="number", class="form-control", name="latitude", placeholder="latitude")
+			.form-group
+				label(for="inputTags", class="col-sm-2 control-label") Tags
+				.col-sm-10
+					input(class="form-control", id="tags" name="tags", value="parking,temperature,outdoor,indoor,pollution")
+					script
+						$('#tags').tagsInput();
+			.form-group
+				label(for="inputDescription", class="col-sm-2 control-label") Description
+				.col-sm-10
+					input(type="text", class="form-control", name="description", placeholder="")
+			button(type="submit", class="btn btn-success pull-right") Submit
